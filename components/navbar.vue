@@ -1,36 +1,45 @@
 <template>
-  <nav class="bg-gradient-to-r from-red-400 to-red-700 bg-opacity-75 p-4 shadow-lg">
-    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
-      <div class="flex items-center space-x-4">
-        <NuxtImg src="/icon.png" height="50" class="rounded-full" />
-        <span class="text-white text-xl font-bold">Archies Festival</span>
-      </div>
-      <div class="hidden md:flex items-center space-x-6">
-        <a href="" class="text-gray-300 hover:text-white transition duration-300">Home</a>
-      <a href="tickets" class="text-gray-300 hover:text-white transition duration-300">Tickets</a>
-      </div>
-      <button class="md:hidden text-white focus:outline-none" @click="toggleMenu">
-        <Icon name="heroicons-outline:menu" size="24" />
-      </button>
-    </div>
-    <div v-if="menuOpen" class="md:hidden mt-4 flex flex-col space-y-2">
-      <a href="" class="text-gray-300 hover:text-white transition duration-300">Home</a>
-      <a href="tickets" class="text-gray-300 hover:text-white transition duration-300">Tickets</a>
-    </div>
-  </nav>
+  <header
+    class="bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-700 p-6 transition duration-700 ease-in-out flex items-center justify-between">
+    <!-- Logo or Title -->
+    <h1
+      class="text-white text-3xl font-bold tracking-wider drop-shadow-md hover:scale-105 transition-transform duration-300">
+      Archie's Festival
+    </h1>
+
+    <!-- Navigation Links -->
+    <nav class="flex gap-6 text-white text-lg font-medium">
+      <a href="#home" class="hover:underline hover:text-yellow-300 transition duration-300 ease-in-out">Home</a>
+      <a href="#lineup" class="hover:underline hover:text-yellow-300 transition duration-300 ease-in-out">Lineup</a>
+      <a href="#tickets" class="hover:underline hover:text-yellow-300 transition duration-300 ease-in-out">Tickets</a>
+      <a href="#contact" class="hover:underline hover:text-yellow-300 transition duration-300 ease-in-out">Contact</a>
+    </nav>
+  </header>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      menuOpen: false,
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.menuOpen = !this.menuOpen;
-    },
-  },
+  name: 'Navbar',
 };
 </script>
+
+<style scoped>
+/* Add a subtle pulse animation for extra flair */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0px rgba(255, 255, 255, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  }
+
+  100% {
+    box-shadow: 0 0 0px rgba(255, 255, 255, 0.4);
+  }
+}
+
+header:hover {
+  animation: pulseGlow 2s infinite;
+}
+</style>
