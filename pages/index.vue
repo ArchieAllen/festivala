@@ -31,11 +31,11 @@
             <div class="mt-12 flex gap-4">
                 <button
                     class="px-8 py-3 text-lg font-semibold bg-white text-pink-600 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all">
-                    Get Tickets
+                    <NuxtLink to="/ticket">Tickets</NuxtLink>
                 </button>
                 <button
                     class="px-8 py-3 text-lg font-semibold bg-transparent border-2 border-white rounded-full hover:bg-white hover:text-pink-600 transition-all">
-                    Lineup
+                    <NuxtLink to="/merch">Merch</NuxtLink>
                 </button>
             </div>
         </div>

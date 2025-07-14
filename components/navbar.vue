@@ -6,20 +6,21 @@
       Archie's Festival
     </h1>
     <nav class="flex gap-6 text-white text-lg font-medium">
-      <a href="home" class="hover:underline hover:text-yellow-300 transition duration-300 ease-in-out">Home</a>
-      <a href="lineup" class="hover:underline hover:text-yellow-300 transition duration-300 ease-in-out">Lineup</a>
-      <a href="ticket" class="hover:underline hover:text-yellow-300 transition duration-300 ease-in-out">Tickets</a>
-      <a href="contact" class="hover:underline hover:text-yellow-300 transition duration-300 ease-in-out">Contact</a>
-      <a href="merch" class="hover:underline hover:text-yellow-300 transiton duration-300 ease-in-out">Merch</a>
+      <a class="hover:underline hover:text-yellow-300 transition duration-300 ease-in-out">
+        <NuxtLink to="/">Home</NuxtLink>
+      </a>
+      <a class="hover:underline hover:text-yellow-300 transition duration-300 ease-in-out">
+        <NuxtLink to="/ticket">Tickets</NuxtLink>
+      </a>
+      <a class="hover:underline hover:text-yellow-300 transition duration-300 ease-in-out">
+        <NuxtLink to="/contact">Contact</NuxtLink>
+      </a>
+      <a class="hover:underline hover:text-yellow-300 transition duration-300 ease-in-out">
+        <NuxtLink to="/merch">Merch</NuxtLink>
+      </a>
     </nav>
   </header>
 </template>
-
-<script>
-export default {
-  name: 'Navbar',
-};
-</script>
 
 <style scoped>
 @keyframes pulseGlow {
