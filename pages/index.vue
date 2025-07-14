@@ -25,7 +25,7 @@
             </h1>
 
             <p class="mt-6 text-xl text-white/80 animate-fade-in">
-                Welcome to your digital rave paradise 🌈🎶
+                The ultimate Festival
             </p>
 
             <div class="mt-12 flex gap-4">
